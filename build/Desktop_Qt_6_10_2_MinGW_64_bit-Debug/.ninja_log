@@ -1,0 +1,24 @@
+# ninja log v6
+32	262	7927063720708445	CryptoRPG_autogen/timestamp	a2ca985f5f53d87a
+32	262	7927063720708445	CryptoRPG_autogen/mocs_compilation.cpp	a2ca985f5f53d87a
+263	372	7927063723995310	C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp	8b50ad3861635f26
+32	262	7927063720708445	C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CryptoRPG_autogen/timestamp	a2ca985f5f53d87a
+32	262	7927063720708445	C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CryptoRPG_autogen/mocs_compilation.cpp	a2ca985f5f53d87a
+755	3349	7927044217168047	CMakeFiles/CryptoRPG.dir/CryptoRPG_autogen/mocs_compilation.cpp.obj	92e79a6a5c343cc7
+372	4719	7927063724117720	CMakeFiles/CryptoRPG.dir/mainwindow.cpp.obj	2cb800bd6a7f1ba7
+4720	5038	7927063767579062	CryptoRPG.exe	17a61e0da8c3f9bb
+761	3376	7927044217223790	CMakeFiles/CryptoRPG.dir/main.cpp.obj	e1786055a6488e09
+262	1172	7927036488304397	CMakeFiles/CryptoRPG.dir/diceengine.cpp.obj	89beca82ac9ee939
+263	372	7927063723995310	CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp	8b50ad3861635f26
+380	1021	7927063724178957	CMakeFiles/CryptoRPG.dir/CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp.obj	5de28e0f226e42c7
+30	937	7927067393216395	build.ninja	fcb9c3742eae3aba
+34	243	7927067703597018	CryptoRPG_autogen/timestamp	a2ca985f5f53d87a
+34	243	7927067703597018	CryptoRPG_autogen/mocs_compilation.cpp	a2ca985f5f53d87a
+34	243	7927067703597018	C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CryptoRPG_autogen/timestamp	a2ca985f5f53d87a
+34	243	7927067703597018	C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CryptoRPG_autogen/mocs_compilation.cpp	a2ca985f5f53d87a
+244	356	7927067706716170	CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp	8b50ad3861635f26
+244	356	7927067706716170	C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp	8b50ad3861635f26
+370	1151	7927067706951326	CMakeFiles/CryptoRPG.dir/CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp.obj	5de28e0f226e42c7
+356	2980	7927067706818596	CMakeFiles/CryptoRPG.dir/main.cpp.obj	e1786055a6488e09
+362	4048	7927067706879584	CMakeFiles/CryptoRPG.dir/mainwindow.cpp.obj	2cb800bd6a7f1ba7
+4048	4345	7927067743737428	CryptoRPG.exe	17a61e0da8c3f9bb

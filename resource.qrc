@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/style">
+        <file>style.qss</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="cenario.jpg">assets/images/cenario.jpg</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file>cryptorpg_icon.ico</file>
+    </qresource>
+</RCC>

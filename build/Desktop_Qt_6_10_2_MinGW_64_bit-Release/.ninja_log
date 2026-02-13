@@ -1,0 +1,13 @@
+# ninja log v6
+10	813	7927070467734460	CryptoRPG_autogen/timestamp	d15f397bac890626
+10	813	7927070467734460	CryptoRPG_autogen/mocs_compilation.cpp	d15f397bac890626
+820	943	7927070470207011	C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp	7d2151cbb79e5eb2
+965	2319	7927070470532809	CMakeFiles/CryptoRPG.dir/diceengine.cpp.obj	39d33d553191fffe
+10	813	7927070467734460	C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/CryptoRPG_autogen/timestamp	d15f397bac890626
+820	943	7927070470207011	CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp	7d2151cbb79e5eb2
+10	813	7927070467734460	C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/CryptoRPG_autogen/mocs_compilation.cpp	d15f397bac890626
+973	1770	7927070470599452	CMakeFiles/CryptoRPG.dir/CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp.obj	fdfd09a6449fd0a0
+943	3366	7927070470318517	CMakeFiles/CryptoRPG.dir/CryptoRPG_autogen/mocs_compilation.cpp.obj	ac013bb297be90bd
+957	4439	7927070470451312	CMakeFiles/CryptoRPG.dir/mainwindow.cpp.obj	e8dd1dcaccf48a04
+950	3430	7927070470379713	CMakeFiles/CryptoRPG.dir/main.cpp.obj	8f78783f61f13909
+4440	4643	7927070505287304	CryptoRPG.exe	b03afce46e767e29

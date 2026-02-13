@@ -1,0 +1,60 @@
+/* Fundo (JPG) */
+QMainWindow {
+    border-image: url(:/images/cenario.jpg) 0 0 0 0 stretch stretch;
+}
+
+/* Deixa o centralwidget transparente pra mostrar o fundo */
+QWidget#centralwidget {
+    background: transparent;
+}
+
+/* Campo de expressão */
+QLineEdit {
+    background-color: rgba(20,20,20,220);
+    color: #e8e2d6;
+    border: 2px solid rgba(200,180,140,80);
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 14pt;
+}
+
+QLineEdit:focus {
+    border: 2px solid #7a1f1f;
+}
+
+/* Botão principal */
+QPushButton#btnRoll {
+    background-color: rgba(60,20,20,230);
+    color: #f3e6e6;
+    border: 2px solid #7a1f1f;
+    border-radius: 14px;
+    padding: 12px;
+    font-size: 18pt;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+QPushButton#btnRoll:hover {
+    background-color: rgba(85,30,30,240);
+}
+
+QPushButton#btnRoll:pressed {
+    background-color: rgba(35,12,12,240);
+}
+
+/* Caixas (resultado e histórico) */
+QPlainTextEdit, QListWidget {
+    background-color: rgba(10,10,10,200);
+    color: #e8e2d6;
+    border: 2px solid rgba(200,180,140,70);
+    border-radius: 14px;
+    padding: 10px;
+    font-size: 12.5pt;
+}
+
+/* Seleção no histórico */
+QListWidget::item:selected {
+    background-color: rgba(80,30,30,200);
+    border: 1px solid #7a1f1f;
+    border-radius: 6px;
+}
