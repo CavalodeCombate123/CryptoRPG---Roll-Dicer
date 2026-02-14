@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1252</width>
+    <height>732</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,6 +15,71 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLineEdit" name="nickEdit">
+      <property name="placeholderText">
+       <string>Seu nick</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="hostIpEdit">
+      <property name="text">
+       <string>127.0.0.1</string>
+      </property>
+      <property name="placeholderText">
+       <string>IP do Host (ex: 192.168.0.10)</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="portSpin">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>65535</number>
+      </property>
+      <property name="value">
+       <number>7777</number>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnHost">
+      <property name="text">
+       <string>HOST</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnJoin">
+      <property name="text">
+       <string>ENTRAR</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnStopHost">
+      <property name="text">
+       <string>SAIR</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnBg">
+      <property name="text">
+       <string>BACKGROUND</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="statusLabel">
+      <property name="text">
+       <string>Status: Offline</string>
+      </property>
+     </widget>
+    </item>
     <item>
      <widget class="QLineEdit" name="inputExpr">
       <property name="placeholderText">
@@ -33,7 +98,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>60</height>
+        <height>50</height>
        </size>
       </property>
       <property name="text">
@@ -46,7 +111,7 @@
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>200</height>
+        <height>100</height>
        </size>
       </property>
       <property name="readOnly">
@@ -55,13 +120,63 @@
      </widget>
     </item>
     <item>
-     <widget class="QListWidget" name="historyList">
+     <widget class="QTabWidget" name="tabWidget">
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>160</height>
+        <height>50</height>
        </size>
       </property>
+      <property name="focusPolicy">
+       <enum>Qt::FocusPolicy::StrongFocus</enum>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="widget">
+       <attribute name="title">
+        <string>Histórico</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QListWidget" name="historyList"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Chat</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QListWidget" name="chatList"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnSendChat">
+          <property name="text">
+           <string>ENVIAR</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="chatInput">
+          <property name="placeholderText">
+           <string>Digite uma mensagem...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Jogadores</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QListWidget" name="playersList"/>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -71,7 +186,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1252</width>
      <height>21</height>
     </rect>
    </property>

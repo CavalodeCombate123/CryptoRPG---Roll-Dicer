@@ -1,5 +1,11 @@
 C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/CryptoRPG_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/55949/Documents/CryptoRPG/mainwindow.h \
   C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/CryptoRPG_autogen/moc_predefs.h \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/QJsonObject \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/QObject \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/QSet \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/QSettings \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/QStringList \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/QVector \
   C:/Qt/6.10.2/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/q20iterator.h \
@@ -23,6 +29,9 @@ C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/
   C:/Qt/6.10.2/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qbytearrayview.h \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/qcalendar.h \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/qcborcommon.h \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/qcborvalue.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qchar.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qcheckedint_impl.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qcompare.h \
@@ -37,6 +46,7 @@ C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/
   C:/Qt/6.10.2/mingw_64/include/QtCore/qcontiguouscache.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/qdatetime.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qdebug.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qendian.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qexceptionhandling.h \
@@ -50,12 +60,18 @@ C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/
   C:/Qt/6.10.2/mingw_64/include/QtCore/qglobalstatic.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qhash.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qhashfunctions.h \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/qiodevice.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qiodevicebase.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qiterator.h \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/qjsondocument.h \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/qjsonobject.h \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/qjsonparseerror.h \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/qjsonvalue.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qlatin1stringview.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qline.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qlist.h \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/qlocale.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qlogging.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qmalloc.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qmap.h \
@@ -76,9 +92,11 @@ C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/
   C:/Qt/6.10.2/mingw_64/include/QtCore/qprocessordetection.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qrect.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qrefcount.h \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/qregularexpression.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qscopedpointer.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qscopeguard.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qset.h \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/qsettings.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qshareddata.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qshareddata_impl.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qsharedpointer.h \
@@ -121,12 +139,16 @@ C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/
   C:/Qt/6.10.2/mingw_64/include/QtCore/qtversionchecks.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qtypeinfo.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qtypes.h \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/qurl.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qutf8stringview.h \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/quuid.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qvarlengtharray.h \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/qvector.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qyieldcpu.h \
+  C:/Qt/6.10.2/mingw_64/include/QtGui/QPixmap \
   C:/Qt/6.10.2/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.10.2/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.10.2/mingw_64/include/QtGui/qbrush.h \
@@ -153,6 +175,15 @@ C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/
   C:/Qt/6.10.2/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.10.2/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.10.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.10.2/mingw_64/include/QtNetwork/QTcpServer \
+  C:/Qt/6.10.2/mingw_64/include/QtNetwork/QTcpSocket \
+  C:/Qt/6.10.2/mingw_64/include/QtNetwork/qabstractsocket.h \
+  C:/Qt/6.10.2/mingw_64/include/QtNetwork/qhostaddress.h \
+  C:/Qt/6.10.2/mingw_64/include/QtNetwork/qtcpserver.h \
+  C:/Qt/6.10.2/mingw_64/include/QtNetwork/qtcpsocket.h \
+  C:/Qt/6.10.2/mingw_64/include/QtNetwork/qtnetwork-config.h \
+  C:/Qt/6.10.2/mingw_64/include/QtNetwork/qtnetworkexports.h \
+  C:/Qt/6.10.2/mingw_64/include/QtNetwork/qtnetworkglobal.h \
   C:/Qt/6.10.2/mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.10.2/mingw_64/include/QtWidgets/qmainwindow.h \
   C:/Qt/6.10.2/mingw_64/include/QtWidgets/qsizepolicy.h \
@@ -374,4 +405,6 @@ C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Users/55949/Documents/CryptoRPG/diceengine.h
+  C:/Users/55949/Documents/CryptoRPG/diceengine.h \
+  C:/Users/55949/Documents/CryptoRPG/roomclient.h \
+  C:/Users/55949/Documents/CryptoRPG/roomserver.h

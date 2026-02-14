@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Release-b6d62383a30896e43c36.json",
+					"jsonFile" : "directory-.-Release-27d12280f5c71a894f66.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "CryptoRPG::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-CryptoRPG-Release-5d116e0b66bd361846ca.json",
+					"jsonFile" : "target-CryptoRPG-Release-46d3a1112a558caf9d78.json",
 					"name" : "CryptoRPG",
 					"projectIndex" : 0
 				},
