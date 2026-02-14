@@ -7,17 +7,23 @@ RoomClient::RoomClient(QObject* parent) : QObject(parent) {
     connect(&m_socket, &QTcpSocket::disconnected, this, &RoomClient::disconnected);
     connect(&m_socket, &QTcpSocket::readyRead, this, &RoomClient::onReadyRead);
 
-    connect(&m_socket, &QTcpSocket::errorOccurred, this, [this](QAbstractSocket::SocketError) {
-        emit error(m_socket.errorString());
-    });
+    connect(&m_socket, &QTcpSocket::errorOccurred, this,
+            [this](QAbstractSocket::SocketError) {
+                emit error(m_socket.errorString());
+            });
 }
 
 void RoomClient::connectTo(const QString& host, quint16 port) {
     m_socket.connectToHost(host, port);
 }
 
-void RoomClient::disconnect() { m_socket.disconnectFromHost(); }
-bool RoomClient::isConnected() const { return m_socket.state() == QAbstractSocket::ConnectedState; }
+void RoomClient::disconnectFromHost() {
+    m_socket.disconnectFromHost();
+}
+
+bool RoomClient::isConnected() const {
+    return m_socket.state() == QAbstractSocket::ConnectedState;
+}
 
 void RoomClient::send(const QJsonObject& msg) {
     if (!isConnected()) return;

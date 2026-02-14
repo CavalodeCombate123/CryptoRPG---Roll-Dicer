@@ -3,8 +3,7 @@ C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/
   C:/Qt/6.10.2/mingw_64/include/QtCore/QJsonObject \
   C:/Qt/6.10.2/mingw_64/include/QtCore/QObject \
   C:/Qt/6.10.2/mingw_64/include/QtCore/QSet \
-  C:/Qt/6.10.2/mingw_64/include/QtCore/QSettings \
-  C:/Qt/6.10.2/mingw_64/include/QtCore/QStringList \
+  C:/Qt/6.10.2/mingw_64/include/QtCore/QString \
   C:/Qt/6.10.2/mingw_64/include/QtCore/QVector \
   C:/Qt/6.10.2/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/q20functional.h \
@@ -96,7 +95,6 @@ C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/
   C:/Qt/6.10.2/mingw_64/include/QtCore/qscopedpointer.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qscopeguard.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qset.h \
-  C:/Qt/6.10.2/mingw_64/include/QtCore/qsettings.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qshareddata.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qshareddata_impl.h \
   C:/Qt/6.10.2/mingw_64/include/QtCore/qsharedpointer.h \

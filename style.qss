@@ -1,6 +1,16 @@
-/* Fundo (JPG) */
-QMainWindow {
-    border-image: url(:/images/cenario.jpg) 0 0 0 0 stretch stretch;
+/* =========================
+   FUNDO DAS JANELAS
+   ========================= */
+
+QMainWindow#MainWindow {
+    background: transparent; /* o fundo da sala vem do paintEvent */
+}
+
+
+/* STARTWINDOW (menu inicial) */
+QMainWindow#StartWindow {
+    border-image: url(:/images/assets/images/menu.jpg) 0 0 0 0 stretch stretch;
+    background: transparent;
 }
 
 /* Deixa o centralwidget transparente pra mostrar o fundo */
@@ -8,53 +18,173 @@ QWidget#centralwidget {
     background: transparent;
 }
 
-/* Campo de expressão */
-QLineEdit {
-    background-color: rgba(20,20,20,220);
+/* =========================
+   TEXTOS
+   ========================= */
+
+QLabel {
     color: #e8e2d6;
-    border: 2px solid rgba(200,180,140,80);
+    font-size: 12pt;
+}
+
+/* =========================
+   INPUTS
+   ========================= */
+
+QLineEdit {
+    background-color: rgba(20,20,20,235);
+    color: #ffffff;
+    border: 2px solid rgba(200,180,140,120);
     border-radius: 12px;
     padding: 10px;
     font-size: 14pt;
 }
 
 QLineEdit:focus {
-    border: 2px solid #7a1f1f;
+    border: 2px solid #b02a2a;
 }
 
-/* Botão principal */
+/* SpinBox (porta) */
+QSpinBox {
+    background-color: rgba(20,20,20,235);
+    color: #ffffff;
+    border: 2px solid rgba(200,180,140,120);
+    border-radius: 12px;
+    padding: 8px;
+    font-size: 13pt;
+}
+
+QSpinBox:focus {
+    border: 2px solid #b02a2a;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    background: rgba(80,60,40,200);
+    border: 1px solid rgba(200,180,140,120);
+    width: 22px;
+}
+
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+    background: rgba(120,80,50,230);
+}
+
+/* =========================
+   BOTÕES
+   ========================= */
+
+/* Botões padrão (Sair, Enviar, etc) - MAIS LEGÍVEIS */
+QPushButton {
+    background-color: rgba(35,35,35,235);
+    color: #ffffff;
+    border: 2px solid rgba(230,210,170,170);
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: 13.5pt;
+    font-weight: 700;
+}
+
+QPushButton:hover {
+    background-color: rgba(55,55,55,235);
+}
+
+QPushButton:pressed {
+    background-color: rgba(20,20,20,235);
+}
+
+QPushButton:disabled {
+    background-color: rgba(30,30,30,140);
+    color: rgba(255,255,255,120);
+    border: 2px solid rgba(230,210,170,60);
+}
+
+/* Botão principal ROLL */
 QPushButton#btnRoll {
-    background-color: rgba(60,20,20,230);
-    color: #f3e6e6;
-    border: 2px solid #7a1f1f;
+    background-color: rgba(110, 25, 25, 245);
+    color: #ffffff;
+    border: 2px solid rgba(255, 210, 160, 200);
     border-radius: 14px;
     padding: 12px;
     font-size: 18pt;
-    font-weight: bold;
+    font-weight: 900;
     letter-spacing: 1px;
 }
 
 QPushButton#btnRoll:hover {
-    background-color: rgba(85,30,30,240);
+    background-color: rgba(140, 35, 35, 245);
 }
 
 QPushButton#btnRoll:pressed {
-    background-color: rgba(35,12,12,240);
+    background-color: rgba(80, 18, 18, 245);
 }
 
-/* Caixas (resultado e histórico) */
+/* =========================
+   CAIXAS (resultado/histórico/chat/jogadores)
+   ========================= */
+
 QPlainTextEdit, QListWidget {
-    background-color: rgba(10,10,10,200);
+    background-color: rgba(8,8,8,215);
     color: #e8e2d6;
-    border: 2px solid rgba(200,180,140,70);
+    border: 2px solid rgba(200,180,140,90);
     border-radius: 14px;
     padding: 10px;
     font-size: 12.5pt;
 }
 
-/* Seleção no histórico */
 QListWidget::item:selected {
-    background-color: rgba(80,30,30,200);
-    border: 1px solid #7a1f1f;
+    background-color: rgba(80,30,30,210);
+    border: 1px solid #b02a2a;
     border-radius: 6px;
+}
+
+/* =========================
+   TABS
+   ========================= */
+
+QTabWidget::pane {
+    border: 2px solid rgba(200,180,140,90);
+    border-radius: 14px;
+    background-color: rgba(8,8,8,150);
+    padding: 6px;
+}
+
+QTabBar::tab {
+    background-color: rgba(20,20,20,210);
+    color: rgba(255,255,255,220);
+    border: 2px solid rgba(200,180,140,90);
+    border-bottom: none;
+    padding: 10px 16px;
+    margin-right: 6px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    font-size: 12.5pt;
+    font-weight: 700;
+}
+
+QTabBar::tab:hover {
+    background-color: rgba(60,40,25,220);
+}
+
+QTabBar::tab:selected {
+    background-color: rgba(110, 25, 25, 235);
+    color: #ffffff;
+    border: 2px solid rgba(255, 210, 160, 200);
+    border-bottom: none;
+}
+
+/* =========================
+   DIALOGS (Host / Join)
+   ========================= */
+
+QDialog#HostSetupWindow,
+QDialog#JoinSetupWindow {
+    border-image: url(:/images/menu.jpg) 0 0 0 0 stretch stretch;
+    background: transparent;
+}
+
+/* Se você criou um widget “panel” dentro do dialog, ele vira o card escuro */
+QDialog#HostSetupWindow QWidget#panel,
+QDialog#JoinSetupWindow QWidget#panel {
+    background-color: rgba(0, 0, 0, 185);
+    border: 2px solid rgba(230,210,170,170);
+    border-radius: 18px;
 }

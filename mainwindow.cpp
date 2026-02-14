@@ -1,14 +1,15 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+
 #include <QPainter>
-#include <QFileDialog>
-#include <QStandardPaths>
 #include <QFile>
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QFont>
+#include <QSettings>
+#include <QFileInfo>
 
-// Cria mensagem players_update a partir do set
+// players_update a partir do set
 static QJsonObject makePlayersUpdate(const QSet<QString>& playersSet) {
     QStringList list(playersSet.begin(), playersSet.end());
     list.sort(Qt::CaseInsensitive);
@@ -28,33 +29,14 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QSettings s("CryptoRPG", "CryptoRPG");
-    QString saved = s.value("backgroundPath", "").toString();
-    if (!saved.isEmpty()) {
-        loadBackground(saved);
-    }
 
-    connect(ui->btnBg, &QPushButton::clicked, this, [this](){
-        QString file = QFileDialog::getOpenFileName(
-            this,
-            "Escolher background",
-            QStandardPaths::writableLocation(QStandardPaths::PicturesLocation),
-            "Imagens (*.png *.jpg *.jpeg)"
-            );
-
-        if (!file.isEmpty()) {
-            loadBackground(file);
-        }
-    });
-
-
-    // Carrega estilo
+    // Estilo
     QFile f(":/style/style.qss");
     if (f.open(QIODevice::ReadOnly | QIODevice::Text)) {
         this->setStyleSheet(QString::fromUtf8(f.readAll()));
     }
 
-    // Fontes
+    // Fontes (opcional)
     QFont font;
     font.setPointSize(14);
     ui->inputExpr->setFont(font);
@@ -68,9 +50,23 @@ MainWindow::MainWindow(QWidget *parent)
     btnFont.setBold(true);
     ui->btnRoll->setFont(btnFont);
 
+    // ======= CARREGA O BACKGROUND ESCOLHIDO NO MENU =======
+    {
+        QSettings s("CryptoRPG", "CryptoRPG");
+        const QString saved = s.value("backgroundPath", "").toString();
+
+        // Se existir e for arquivo mesmo, carrega. Se não, fica vazio e o paintEvent usa fallback.
+        if (!saved.isEmpty() && QFileInfo::exists(saved)) {
+            loadBackground(saved);
+        } else {
+            bgPixmap = QPixmap(); // vazio -> paintEvent vai usar cenario.jpg
+            bgPath.clear();
+            update();
+        }
+    }
+
     // Estado inicial
-    ui->statusLabel->setText("Status: offline");
-    ui->btnStopHost->setEnabled(false);
+    ui->statusLabel->setText("Status: solo");
 
     // Rede
     server = new RoomServer(this);
@@ -81,41 +77,29 @@ MainWindow::MainWindow(QWidget *parent)
     });
 
     connect(client, &RoomClient::connected, this, [this](){
-        ui->statusLabel->setText("Status: conectado");
-        ui->btnJoin->setEnabled(true);
+        if (server && server->isRunning()) {
+            ui->statusLabel->setText("Status: host ativo (cliente local conectado)");
+        } else {
+            ui->statusLabel->setText("Status: conectado");
+        }
     });
 
     connect(client, &RoomClient::disconnected, this, [this](){
-        ui->statusLabel->setText("Status: offline");
-
-        // Se não estiver host, reativa botões
-        if (!(server && server->isRunning())) {
-            ui->btnJoin->setEnabled(true);
-            ui->btnHost->setEnabled(true);
-            ui->btnStopHost->setEnabled(false);
-        }
+        if (mode != GameMode::Solo) ui->statusLabel->setText("Status: offline");
     });
 
     connect(client, &RoomClient::error, this, [this](const QString& e){
         ui->statusLabel->setText("Status: erro - " + e);
-
-        if (!(server && server->isRunning())) {
-            ui->btnJoin->setEnabled(true);
-        }
     });
 
-    // HOST: recebe mensagens dos clientes e decide o que fazer
+    // HOST: recebe mensagens
     connect(server, &RoomServer::messageReceived, this, [this](const QJsonObject& msg){
         const QString type = msg.value("type").toString();
 
         if (type == "join") {
             const QString user = msg.value("user").toString();
-            ui->historyList->addItem("[JOIN] " + user);
-
             players.insert(user);
-            server->broadcast(makePlayersUpdate(players)); // mantém isso
-
-            // NÃO retransmite o join aqui (o RoomServer já retransmite sozinho)
+            server->broadcast(makePlayersUpdate(players));
             return;
         }
 
@@ -132,18 +116,12 @@ MainWindow::MainWindow(QWidget *parent)
             out["details"] = QString::fromStdString(r.detailsText);
             out["total"] = r.total;
 
-            server->broadcast(out); // aqui continua, porque isso é novo (o server não gera sozinho)
-            return;
-        }
-
-        if (type == "chat") {
-            // NÃO retransmite o chat aqui (o RoomServer já retransmite sozinho)
+            server->broadcast(out);
             return;
         }
     });
 
-
-    // CLIENTE: recebe mensagens e atualiza UI
+    // CLIENTE: recebe mensagens
     connect(client, &RoomClient::messageReceived, this, [this](const QJsonObject& msg){
         const QString type = msg.value("type").toString();
 
@@ -154,15 +132,10 @@ MainWindow::MainWindow(QWidget *parent)
             const int total = msg.value("total").toInt();
 
             const QString line =
-                user + " rolou " + expr + " => " + details + " | total:" + QString::number(total);
+                user + " rolou " + expr + " => " + details + " | total: " + QString::number(total);
 
             ui->historyList->addItem(line);
             ui->outputBox->setPlainText(details + "\nTotal: " + QString::number(total));
-            return;
-        }
-
-        if (type == "join") {
-            const QString user = msg.value("user").toString();
             return;
         }
 
@@ -182,7 +155,7 @@ MainWindow::MainWindow(QWidget *parent)
         }
     });
 
-    // Enviar chat (botão + Enter)
+    // Enviar chat
     auto sendChat = [this]() {
         QString text = ui->chatInput->text().trimmed();
         if (text.isEmpty()) return;
@@ -196,7 +169,6 @@ MainWindow::MainWindow(QWidget *parent)
             m["text"] = text;
             client->send(m);
         } else {
-            // offline: mostra local
             ui->chatList->addItem(user + ": " + text);
             ui->chatList->scrollToBottom();
         }
@@ -207,85 +179,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btnSendChat, &QPushButton::clicked, this, sendChat);
     connect(ui->chatInput, &QLineEdit::returnPressed, this, sendChat);
 
-    // BOTÃO HOST
-    connect(ui->btnHost, &QPushButton::clicked, this, [this](){
-        nickname = ui->nickEdit->text().trimmed();
-        if (nickname.isEmpty()) nickname = "Player";
-
-        const quint16 port = static_cast<quint16>(ui->portSpin->value());
-
-        if (!server->start(port)) {
-            ui->statusLabel->setText("Status: falha ao iniciar host");
-            return;
-        }
-
-        // UI
-        ui->btnHost->setEnabled(false);
-        ui->btnJoin->setEnabled(false);
-        ui->btnStopHost->setEnabled(true);
-
-        // Lista de jogadores no host começa com ele mesmo
-        players.clear();
-        players.insert(nickname);
-        ui->playersList->clear();
-        ui->playersList->addItem(nickname);
-
-        // Host também vira cliente local
-        client->connectTo("127.0.0.1", port);
-
-        // Envia join quando conectar
-        connect(client, &RoomClient::connected, this, [this](){
-            QJsonObject join;
-            join["type"] = "join";
-            join["user"] = nickname;
-            client->send(join);
-        }, Qt::SingleShotConnection);
-
-        ui->statusLabel->setText("Status: host ativo (porta " + QString::number(port) + ")");
-    });
-
-    // BOTÃO ENTRAR
-    connect(ui->btnJoin, &QPushButton::clicked, this, [this](){
-        nickname = ui->nickEdit->text().trimmed();
-        if (nickname.isEmpty()) nickname = "Player";
-
-        QString hostIp = ui->hostIpEdit->text().trimmed();
-        if (hostIp.isEmpty()) hostIp = "127.0.0.1";
-
-        const quint16 port = static_cast<quint16>(ui->portSpin->value());
-
-        ui->btnJoin->setEnabled(false);
-        ui->statusLabel->setText("Status: conectando...");
-
-        client->connectTo(hostIp, port);
-
-        connect(client, &RoomClient::connected, this, [this](){
-            QJsonObject join;
-            join["type"] = "join";
-            join["user"] = nickname;
-            client->send(join);
-        }, Qt::SingleShotConnection);
-    });
-
-    // BOTÃO ENCERRAR SALA (host)
-    connect(ui->btnStopHost, &QPushButton::clicked, this, [this]() {
-        if (client && client->isConnected()) {
-            client->disconnect();
-        }
-        if (server && server->isRunning()) {
-            server->stop();
-        }
-
-        players.clear();
-        ui->playersList->clear();
-
-        ui->statusLabel->setText("Status: offline");
-        ui->btnHost->setEnabled(true);
-        ui->btnJoin->setEnabled(true);
-        ui->btnStopHost->setEnabled(false);
-    });
-
-    // BOTÃO ROLL (rede se conectado, local se offline)
+    // Roll
     connect(ui->btnRoll, &QPushButton::clicked, this, [this]() {
         const QString exprQ = ui->inputExpr->text().trimmed();
 
@@ -294,7 +188,6 @@ MainWindow::MainWindow(QWidget *parent)
             return;
         }
 
-        // Rede: manda pro host calcular
         if (client && client->isConnected()) {
             QJsonObject req;
             req["type"] = "roll_request";
@@ -304,7 +197,6 @@ MainWindow::MainWindow(QWidget *parent)
             return;
         }
 
-        // Offline: rolagem local
         try {
             RollResult r = engine.rollExpression(exprQ.toStdString());
             QString out = QString::fromStdString(r.detailsText)
@@ -315,7 +207,20 @@ MainWindow::MainWindow(QWidget *parent)
             ui->outputBox->setPlainText("Expressao invalida. Ex: 3d8+2d10+5 ou 2d20-3");
         }
     });
+
+    // Sair
+    connect(ui->btnLeave, &QPushButton::clicked, this, [this](){
+        leaveRoom();
+    });
+
+    applySoloUi();
 }
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
 void MainWindow::loadBackground(const QString& path)
 {
     QPixmap px(path);
@@ -324,30 +229,32 @@ void MainWindow::loadBackground(const QString& path)
     bgPixmap = px;
     bgPath = path;
 
-    // salva nas configurações pra lembrar depois
+    // SALVA para todas as janelas futuras (StartWindow e MainWindow)
     QSettings s("CryptoRPG", "CryptoRPG");
     s.setValue("backgroundPath", bgPath);
 
-    update(); // redesenha a janela
+    update();
 }
+
 void MainWindow::paintEvent(QPaintEvent* event)
 {
-    // desenha o fundo primeiro
-    if (!bgPixmap.isNull()) {
-        QPainter p(this);
-        p.setRenderHint(QPainter::SmoothPixmapTransform, true);
+    QPainter p(this);
+    p.setRenderHint(QPainter::SmoothPixmapTransform, true);
 
-        // ocupa a área inteira da janela
+    QPixmap toDraw = bgPixmap;
+    if (toDraw.isNull()) {
+        toDraw.load(":/images/cenario.jpg"); // fallback padrão
+    }
+
+    if (!toDraw.isNull()) {
         QRect target = rect();
 
-        // escala pra preencher (sem distorcer) e corta o excesso (central)
-        QPixmap scaled = bgPixmap.scaled(
+        QPixmap scaled = toDraw.scaled(
             target.size(),
             Qt::KeepAspectRatioByExpanding,
             Qt::SmoothTransformation
             );
 
-        // centraliza o crop
         int x = (scaled.width()  - target.width())  / 2;
         int y = (scaled.height() - target.height()) / 2;
         QRect source(x, y, target.width(), target.height());
@@ -355,12 +262,97 @@ void MainWindow::paintEvent(QPaintEvent* event)
         p.drawPixmap(target, scaled, source);
     }
 
-    // deixa o Qt desenhar o resto (widgets, bordas, etc.)
     QMainWindow::paintEvent(event);
 }
-
-
-MainWindow::~MainWindow()
+void MainWindow::setNick(const QString& nick)
 {
-    delete ui;
+    nickname = nick.isEmpty() ? "Player" : nick;
+}
+
+void MainWindow::applySoloUi()
+{
+    mode = GameMode::Solo;
+
+    // tabs: 0=Histórico, 1=Chat, 2=Jogadores
+    ui->tabWidget->setTabVisible(1, false);
+    ui->tabWidget->setTabVisible(2, false);
+    ui->tabWidget->setCurrentIndex(0);
+
+    ui->statusLabel->setText("Status: solo");
+}
+
+void MainWindow::applyOnlineUi()
+{
+    ui->tabWidget->setTabVisible(1, true);
+    ui->tabWidget->setTabVisible(2, true);
+}
+
+void MainWindow::startSoloMode()
+{
+    if (client && client->isConnected()) client->disconnectFromHost();
+    if (server && server->isRunning()) server->stop();
+
+    players.clear();
+    ui->playersList->clear();
+
+    applySoloUi();
+}
+
+void MainWindow::startHost(quint16 port)
+{
+    mode = GameMode::OnlineHost;
+    applyOnlineUi();
+
+    players.clear();
+    ui->playersList->clear();
+
+    if (!server->start(port)) {
+        ui->statusLabel->setText("Status: falha ao iniciar host");
+        return;
+    }
+
+    // host entra como player
+    players.insert(nickname);
+    ui->playersList->addItem(nickname);
+
+    ui->statusLabel->setText("Status: host ativo (porta " + QString::number(port) + ")");
+
+    // host também vira cliente local
+    client->connectTo("127.0.0.1", port);
+
+    connect(client, &RoomClient::connected, this, [this](){
+        QJsonObject join;
+        join["type"] = "join";
+        join["user"] = nickname;
+        client->send(join);
+    }, Qt::SingleShotConnection);
+}
+
+void MainWindow::startJoin(const QString& ip, quint16 port)
+{
+    mode = GameMode::OnlineClient;
+    applyOnlineUi();
+
+    players.clear();
+    ui->playersList->clear();
+
+    ui->statusLabel->setText("Status: conectando...");
+    client->connectTo(ip, port);
+
+    connect(client, &RoomClient::connected, this, [this](){
+        QJsonObject join;
+        join["type"] = "join";
+        join["user"] = nickname;
+        client->send(join);
+
+        ui->statusLabel->setText("Status: conectado");
+    }, Qt::SingleShotConnection);
+}
+
+void MainWindow::leaveRoom()
+{
+    if (client && client->isConnected()) client->disconnectFromHost();
+    if (server && server->isRunning()) server->stop();
+
+    close();
 }

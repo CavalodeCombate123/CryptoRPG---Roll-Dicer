@@ -16,60 +16,9 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLineEdit" name="nickEdit">
-      <property name="placeholderText">
-       <string>Seu nick</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="hostIpEdit">
-      <property name="text">
-       <string>127.0.0.1</string>
-      </property>
-      <property name="placeholderText">
-       <string>IP do Host (ex: 192.168.0.10)</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QSpinBox" name="portSpin">
-      <property name="minimum">
-       <number>1</number>
-      </property>
-      <property name="maximum">
-       <number>65535</number>
-      </property>
-      <property name="value">
-       <number>7777</number>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="btnHost">
-      <property name="text">
-       <string>HOST</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="btnJoin">
-      <property name="text">
-       <string>ENTRAR</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="btnStopHost">
+     <widget class="QPushButton" name="btnLeave">
       <property name="text">
        <string>SAIR</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="btnBg">
-      <property name="text">
-       <string>BACKGROUND</string>
       </property>
      </widget>
     </item>

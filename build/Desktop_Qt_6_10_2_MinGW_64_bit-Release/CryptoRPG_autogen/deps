@@ -2,7 +2,7 @@ CryptoRPG_autogen/timestamp: \
 	C:/Qt/6.10.2/mingw_64/include/QtCore/QJsonObject \
 	C:/Qt/6.10.2/mingw_64/include/QtCore/QObject \
 	C:/Qt/6.10.2/mingw_64/include/QtCore/QSet \
-	C:/Qt/6.10.2/mingw_64/include/QtCore/QSettings \
+	C:/Qt/6.10.2/mingw_64/include/QtCore/QString \
 	C:/Qt/6.10.2/mingw_64/include/QtCore/QStringList \
 	C:/Qt/6.10.2/mingw_64/include/QtCore/QVector \
 	C:/Qt/6.10.2/mingw_64/include/QtCore/q17memory.h \
@@ -95,7 +95,6 @@ CryptoRPG_autogen/timestamp: \
 	C:/Qt/6.10.2/mingw_64/include/QtCore/qscopedpointer.h \
 	C:/Qt/6.10.2/mingw_64/include/QtCore/qscopeguard.h \
 	C:/Qt/6.10.2/mingw_64/include/QtCore/qset.h \
-	C:/Qt/6.10.2/mingw_64/include/QtCore/qsettings.h \
 	C:/Qt/6.10.2/mingw_64/include/QtCore/qshareddata.h \
 	C:/Qt/6.10.2/mingw_64/include/QtCore/qshareddata_impl.h \
 	C:/Qt/6.10.2/mingw_64/include/QtCore/qsharedpointer.h \
@@ -183,7 +182,9 @@ CryptoRPG_autogen/timestamp: \
 	C:/Qt/6.10.2/mingw_64/include/QtNetwork/qtnetwork-config.h \
 	C:/Qt/6.10.2/mingw_64/include/QtNetwork/qtnetworkexports.h \
 	C:/Qt/6.10.2/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+	C:/Qt/6.10.2/mingw_64/include/QtWidgets/QDialog \
 	C:/Qt/6.10.2/mingw_64/include/QtWidgets/QMainWindow \
+	C:/Qt/6.10.2/mingw_64/include/QtWidgets/qdialog.h \
 	C:/Qt/6.10.2/mingw_64/include/QtWidgets/qmainwindow.h \
 	C:/Qt/6.10.2/mingw_64/include/QtWidgets/qsizepolicy.h \
 	C:/Qt/6.10.2/mingw_64/include/QtWidgets/qtabwidget.h \
@@ -620,6 +621,10 @@ CryptoRPG_autogen/timestamp: \
 	C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/CryptoRPG_autogen/moc_predefs.h \
 	C:/Users/55949/Documents/CryptoRPG/diceengine.cpp \
 	C:/Users/55949/Documents/CryptoRPG/diceengine.h \
+	C:/Users/55949/Documents/CryptoRPG/hostsetupwindow.cpp \
+	C:/Users/55949/Documents/CryptoRPG/hostsetupwindow.h \
+	C:/Users/55949/Documents/CryptoRPG/joinsetupwindow.cpp \
+	C:/Users/55949/Documents/CryptoRPG/joinsetupwindow.h \
 	C:/Users/55949/Documents/CryptoRPG/main.cpp \
 	C:/Users/55949/Documents/CryptoRPG/mainwindow.cpp \
 	C:/Users/55949/Documents/CryptoRPG/mainwindow.h \
@@ -629,5 +634,14 @@ CryptoRPG_autogen/timestamp: \
 	C:/Users/55949/Documents/CryptoRPG/roomprotocol.h \
 	C:/Users/55949/Documents/CryptoRPG/roomserver.cpp \
 	C:/Users/55949/Documents/CryptoRPG/roomserver.h \
+	C:/Users/55949/Documents/CryptoRPG/solowindow.cpp \
+	C:/Users/55949/Documents/CryptoRPG/solowindow.h \
+	C:/Users/55949/Documents/CryptoRPG/startwindow.cpp \
+	C:/Users/55949/Documents/CryptoRPG/startwindow.h \
+	C:/Users/55949/Documents/CryptoRPG/theme.h \
+	C:/Users/55949/Documents/CryptoRPG/hostsetupwindow.ui \
+	C:/Users/55949/Documents/CryptoRPG/joinsetupwindow.ui \
 	C:/Users/55949/Documents/CryptoRPG/mainwindow.ui \
+	C:/Users/55949/Documents/CryptoRPG/solowindow.ui \
+	C:/Users/55949/Documents/CryptoRPG/startwindow.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

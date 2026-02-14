@@ -18,7 +18,6 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QVBoxLayout>
@@ -31,13 +30,7 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
-    QLineEdit *nickEdit;
-    QLineEdit *hostIpEdit;
-    QSpinBox *portSpin;
-    QPushButton *btnHost;
-    QPushButton *btnJoin;
-    QPushButton *btnStopHost;
-    QPushButton *btnBg;
+    QPushButton *btnLeave;
     QLabel *statusLabel;
     QLineEdit *inputExpr;
     QPushButton *btnRoll;
@@ -66,43 +59,10 @@ public:
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
         verticalLayout->setObjectName("verticalLayout");
-        nickEdit = new QLineEdit(centralwidget);
-        nickEdit->setObjectName("nickEdit");
+        btnLeave = new QPushButton(centralwidget);
+        btnLeave->setObjectName("btnLeave");
 
-        verticalLayout->addWidget(nickEdit);
-
-        hostIpEdit = new QLineEdit(centralwidget);
-        hostIpEdit->setObjectName("hostIpEdit");
-
-        verticalLayout->addWidget(hostIpEdit);
-
-        portSpin = new QSpinBox(centralwidget);
-        portSpin->setObjectName("portSpin");
-        portSpin->setMinimum(1);
-        portSpin->setMaximum(65535);
-        portSpin->setValue(7777);
-
-        verticalLayout->addWidget(portSpin);
-
-        btnHost = new QPushButton(centralwidget);
-        btnHost->setObjectName("btnHost");
-
-        verticalLayout->addWidget(btnHost);
-
-        btnJoin = new QPushButton(centralwidget);
-        btnJoin->setObjectName("btnJoin");
-
-        verticalLayout->addWidget(btnJoin);
-
-        btnStopHost = new QPushButton(centralwidget);
-        btnStopHost->setObjectName("btnStopHost");
-
-        verticalLayout->addWidget(btnStopHost);
-
-        btnBg = new QPushButton(centralwidget);
-        btnBg->setObjectName("btnBg");
-
-        verticalLayout->addWidget(btnBg);
+        verticalLayout->addWidget(btnLeave);
 
         statusLabel = new QLabel(centralwidget);
         statusLabel->setObjectName("statusLabel");
@@ -199,13 +159,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        nickEdit->setPlaceholderText(QCoreApplication::translate("MainWindow", "Seu nick", nullptr));
-        hostIpEdit->setText(QCoreApplication::translate("MainWindow", "127.0.0.1", nullptr));
-        hostIpEdit->setPlaceholderText(QCoreApplication::translate("MainWindow", "IP do Host (ex: 192.168.0.10)", nullptr));
-        btnHost->setText(QCoreApplication::translate("MainWindow", "HOST", nullptr));
-        btnJoin->setText(QCoreApplication::translate("MainWindow", "ENTRAR", nullptr));
-        btnStopHost->setText(QCoreApplication::translate("MainWindow", "SAIR", nullptr));
-        btnBg->setText(QCoreApplication::translate("MainWindow", "BACKGROUND", nullptr));
+        btnLeave->setText(QCoreApplication::translate("MainWindow", "SAIR", nullptr));
         statusLabel->setText(QCoreApplication::translate("MainWindow", "Status: Offline", nullptr));
         inputExpr->setPlaceholderText(QCoreApplication::translate("MainWindow", "Ex: 3d8+2d10+5", nullptr));
         btnRoll->setText(QCoreApplication::translate("MainWindow", "ROLL", nullptr));

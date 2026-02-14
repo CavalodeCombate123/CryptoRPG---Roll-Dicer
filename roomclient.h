@@ -9,7 +9,7 @@ public:
     explicit RoomClient(QObject* parent = nullptr);
 
     void connectTo(const QString& host, quint16 port);
-    void disconnect();
+    void disconnectFromHost();
     bool isConnected() const;
 
     void send(const QJsonObject& msg);

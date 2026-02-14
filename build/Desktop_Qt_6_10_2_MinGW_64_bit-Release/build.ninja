@@ -97,6 +97,38 @@ build CMakeFiles/CryptoRPG.dir/roomclient.cpp.obj: CXX_COMPILER__CryptoRPG_unsca
   OBJECT_DIR = CMakeFiles\CryptoRPG.dir
   OBJECT_FILE_DIR = CMakeFiles\CryptoRPG.dir
 
+build CMakeFiles/CryptoRPG.dir/startwindow.cpp.obj: CXX_COMPILER__CryptoRPG_unscanned_Release C$:/Users/55949/Documents/CryptoRPG/startwindow.cpp || cmake_object_order_depends_target_CryptoRPG
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\CryptoRPG.dir\startwindow.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/CryptoRPG_autogen/include -isystem C:/Qt/6.10.2/mingw_64/include/QtCore -isystem C:/Qt/6.10.2/mingw_64/include -isystem C:/Qt/6.10.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.2/mingw_64/include/QtGui -isystem C:/Qt/6.10.2/mingw_64/include/QtNetwork
+  OBJECT_DIR = CMakeFiles\CryptoRPG.dir
+  OBJECT_FILE_DIR = CMakeFiles\CryptoRPG.dir
+
+build CMakeFiles/CryptoRPG.dir/solowindow.cpp.obj: CXX_COMPILER__CryptoRPG_unscanned_Release C$:/Users/55949/Documents/CryptoRPG/solowindow.cpp || cmake_object_order_depends_target_CryptoRPG
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\CryptoRPG.dir\solowindow.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/CryptoRPG_autogen/include -isystem C:/Qt/6.10.2/mingw_64/include/QtCore -isystem C:/Qt/6.10.2/mingw_64/include -isystem C:/Qt/6.10.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.2/mingw_64/include/QtGui -isystem C:/Qt/6.10.2/mingw_64/include/QtNetwork
+  OBJECT_DIR = CMakeFiles\CryptoRPG.dir
+  OBJECT_FILE_DIR = CMakeFiles\CryptoRPG.dir
+
+build CMakeFiles/CryptoRPG.dir/hostsetupwindow.cpp.obj: CXX_COMPILER__CryptoRPG_unscanned_Release C$:/Users/55949/Documents/CryptoRPG/hostsetupwindow.cpp || cmake_object_order_depends_target_CryptoRPG
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\CryptoRPG.dir\hostsetupwindow.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/CryptoRPG_autogen/include -isystem C:/Qt/6.10.2/mingw_64/include/QtCore -isystem C:/Qt/6.10.2/mingw_64/include -isystem C:/Qt/6.10.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.2/mingw_64/include/QtGui -isystem C:/Qt/6.10.2/mingw_64/include/QtNetwork
+  OBJECT_DIR = CMakeFiles\CryptoRPG.dir
+  OBJECT_FILE_DIR = CMakeFiles\CryptoRPG.dir
+
+build CMakeFiles/CryptoRPG.dir/joinsetupwindow.cpp.obj: CXX_COMPILER__CryptoRPG_unscanned_Release C$:/Users/55949/Documents/CryptoRPG/joinsetupwindow.cpp || cmake_object_order_depends_target_CryptoRPG
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\CryptoRPG.dir\joinsetupwindow.cpp.obj.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/CryptoRPG_autogen/include -isystem C:/Qt/6.10.2/mingw_64/include/QtCore -isystem C:/Qt/6.10.2/mingw_64/include -isystem C:/Qt/6.10.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.2/mingw_64/include/QtGui -isystem C:/Qt/6.10.2/mingw_64/include/QtNetwork
+  OBJECT_DIR = CMakeFiles\CryptoRPG.dir
+  OBJECT_FILE_DIR = CMakeFiles\CryptoRPG.dir
+
 build CMakeFiles/CryptoRPG.dir/CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp.obj: CXX_COMPILER__CryptoRPG_unscanned_Release C$:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp || cmake_object_order_depends_target_CryptoRPG
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\CryptoRPG.dir\CryptoRPG_autogen\EWIEGA46WW\qrc_resource.cpp.obj.d
@@ -113,7 +145,7 @@ build CMakeFiles/CryptoRPG.dir/CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp.obj
 #############################################
 # Link the executable CryptoRPG.exe
 
-build CryptoRPG.exe: CXX_EXECUTABLE_LINKER__CryptoRPG_Release CMakeFiles/CryptoRPG.dir/CryptoRPG_autogen/mocs_compilation.cpp.obj CMakeFiles/CryptoRPG.dir/main.cpp.obj CMakeFiles/CryptoRPG.dir/mainwindow.cpp.obj CMakeFiles/CryptoRPG.dir/diceengine.cpp.obj CMakeFiles/CryptoRPG.dir/roomserver.cpp.obj CMakeFiles/CryptoRPG.dir/roomclient.cpp.obj CMakeFiles/CryptoRPG.dir/CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp.obj | C$:/Qt/6.10.2/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.10.2/mingw_64/lib/libQt6Network.a C$:/Qt/6.10.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.10.2/mingw_64/lib/libQt6Core.a C$:/Qt/6.10.2/mingw_64/lib/libQt6EntryPoint.a || CryptoRPG_autogen CryptoRPG_autogen_timestamp_deps
+build CryptoRPG.exe: CXX_EXECUTABLE_LINKER__CryptoRPG_Release CMakeFiles/CryptoRPG.dir/CryptoRPG_autogen/mocs_compilation.cpp.obj CMakeFiles/CryptoRPG.dir/main.cpp.obj CMakeFiles/CryptoRPG.dir/mainwindow.cpp.obj CMakeFiles/CryptoRPG.dir/diceengine.cpp.obj CMakeFiles/CryptoRPG.dir/roomserver.cpp.obj CMakeFiles/CryptoRPG.dir/roomclient.cpp.obj CMakeFiles/CryptoRPG.dir/startwindow.cpp.obj CMakeFiles/CryptoRPG.dir/solowindow.cpp.obj CMakeFiles/CryptoRPG.dir/hostsetupwindow.cpp.obj CMakeFiles/CryptoRPG.dir/joinsetupwindow.cpp.obj CMakeFiles/CryptoRPG.dir/CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp.obj | C$:/Qt/6.10.2/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.10.2/mingw_64/lib/libQt6Network.a C$:/Qt/6.10.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.10.2/mingw_64/lib/libQt6Core.a C$:/Qt/6.10.2/mingw_64/lib/libQt6EntryPoint.a || CryptoRPG_autogen CryptoRPG_autogen_timestamp_deps
   FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.10.2/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.10.2/mingw_64/lib/libQt6Network.a  C:/Qt/6.10.2/mingw_64/lib/libQt6Gui.a  -ld3d11  -ldxgi  -ldxguid  -ld3d12  C:/Qt/6.10.2/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.10.2/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -200,7 +232,7 @@ build CryptoRPG_autogen_timestamp_deps: phony
 #############################################
 # Utility command for CryptoRPG_autogen
 
-build CryptoRPG_autogen: phony CMakeFiles/CryptoRPG_autogen CryptoRPG_autogen/include/ui_mainwindow.h CryptoRPG_autogen/timestamp CryptoRPG_autogen/mocs_compilation.cpp CryptoRPG_autogen_timestamp_deps
+build CryptoRPG_autogen: phony CMakeFiles/CryptoRPG_autogen CryptoRPG_autogen/include/ui_mainwindow.h CryptoRPG_autogen/include/ui_startwindow.h CryptoRPG_autogen/include/ui_solowindow.h CryptoRPG_autogen/include/ui_hostsetupwindow.h CryptoRPG_autogen/include/ui_joinsetupwindow.h CryptoRPG_autogen/timestamp CryptoRPG_autogen/mocs_compilation.cpp CryptoRPG_autogen_timestamp_deps
 
 
 #############################################
@@ -217,7 +249,7 @@ build CryptoRPG_autogen/timestamp CryptoRPG_autogen/mocs_compilation.cpp | ${cma
 #############################################
 # Custom command for CryptoRPG_autogen\EWIEGA46WW\qrc_resource.cpp
 
-build CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp | ${cmake_ninja_workdir}CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp: CUSTOM_COMMAND C$:/Users/55949/Documents/CryptoRPG/resource.qrc CMakeFiles/CryptoRPG_autogen.dir/AutoRcc_resource_EWIEGA46WW_Info.json C$:/Users/55949/Documents/CryptoRPG/assets/images/cenario.jpg C$:/Users/55949/Documents/CryptoRPG/style.qss C$:/Users/55949/Documents/CryptoRPG/cryptorpg_icon.ico C$:/Qt/6.10.2/mingw_64/bin/rcc.exe C$:/Qt/6.10.2/mingw_64/bin/rcc.exe || CryptoRPG_autogen CryptoRPG_autogen_timestamp_deps
+build CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp | ${cmake_ninja_workdir}CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp: CUSTOM_COMMAND C$:/Users/55949/Documents/CryptoRPG/resource.qrc CMakeFiles/CryptoRPG_autogen.dir/AutoRcc_resource_EWIEGA46WW_Info.json C$:/Users/55949/Documents/CryptoRPG/assets/images/cenario.jpg C$:/Users/55949/Documents/CryptoRPG/assets/images/menu.jpg C$:/Users/55949/Documents/CryptoRPG/style.qss C$:/Users/55949/Documents/CryptoRPG/cryptorpg_icon.ico C$:/Qt/6.10.2/mingw_64/bin/rcc.exe C$:/Qt/6.10.2/mingw_64/bin/rcc.exe || CryptoRPG_autogen CryptoRPG_autogen_timestamp_deps
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\55949\Documents\CryptoRPG\build\Desktop_Qt_6_10_2_MinGW_64_bit-Release && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autorcc C:/Users/55949/Documents/CryptoRPG/build/Desktop_Qt_6_10_2_MinGW_64_bit-Release/CMakeFiles/CryptoRPG_autogen.dir/AutoRcc_resource_EWIEGA46WW_Info.json Release"
   DESC = Automatic RCC for resource.qrc
   restat = 1
@@ -226,7 +258,7 @@ build CryptoRPG_autogen/EWIEGA46WW/qrc_resource.cpp | ${cmake_ninja_workdir}Cryp
 #############################################
 # Phony custom command for CMakeFiles\CryptoRPG_autogen
 
-build CMakeFiles/CryptoRPG_autogen CryptoRPG_autogen/include/ui_mainwindow.h | ${cmake_ninja_workdir}CMakeFiles/CryptoRPG_autogen ${cmake_ninja_workdir}CryptoRPG_autogen/include/ui_mainwindow.h: phony CryptoRPG_autogen/timestamp || CryptoRPG_autogen_timestamp_deps
+build CMakeFiles/CryptoRPG_autogen CryptoRPG_autogen/include/ui_mainwindow.h CryptoRPG_autogen/include/ui_startwindow.h CryptoRPG_autogen/include/ui_solowindow.h CryptoRPG_autogen/include/ui_hostsetupwindow.h CryptoRPG_autogen/include/ui_joinsetupwindow.h | ${cmake_ninja_workdir}CMakeFiles/CryptoRPG_autogen ${cmake_ninja_workdir}CryptoRPG_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}CryptoRPG_autogen/include/ui_startwindow.h ${cmake_ninja_workdir}CryptoRPG_autogen/include/ui_solowindow.h ${cmake_ninja_workdir}CryptoRPG_autogen/include/ui_hostsetupwindow.h ${cmake_ninja_workdir}CryptoRPG_autogen/include/ui_joinsetupwindow.h: phony CryptoRPG_autogen/timestamp || CryptoRPG_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

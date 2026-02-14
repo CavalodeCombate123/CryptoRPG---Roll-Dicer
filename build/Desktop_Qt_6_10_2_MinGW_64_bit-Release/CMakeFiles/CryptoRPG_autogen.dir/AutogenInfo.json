@@ -361,6 +361,18 @@
 			null
 		],
 		[
+			"C:/Users/55949/Documents/CryptoRPG/hostsetupwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_hostsetupwindow.cpp",
+			null
+		],
+		[
+			"C:/Users/55949/Documents/CryptoRPG/joinsetupwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_joinsetupwindow.cpp",
+			null
+		],
+		[
 			"C:/Users/55949/Documents/CryptoRPG/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -382,6 +394,24 @@
 			"C:/Users/55949/Documents/CryptoRPG/roomserver.h",
 			"MU",
 			"EWIEGA46WW/moc_roomserver.cpp",
+			null
+		],
+		[
+			"C:/Users/55949/Documents/CryptoRPG/solowindow.h",
+			"MU",
+			"EWIEGA46WW/moc_solowindow.cpp",
+			null
+		],
+		[
+			"C:/Users/55949/Documents/CryptoRPG/startwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_startwindow.cpp",
+			null
+		],
+		[
+			"C:/Users/55949/Documents/CryptoRPG/theme.h",
+			"MU",
+			"EWIEGA46WW/moc_theme.cpp",
 			null
 		]
 	],
@@ -460,10 +490,14 @@
 	"SOURCES" : 
 	[
 		[ "C:/Users/55949/Documents/CryptoRPG/diceengine.cpp", "MU", null ],
+		[ "C:/Users/55949/Documents/CryptoRPG/hostsetupwindow.cpp", "MU", null ],
+		[ "C:/Users/55949/Documents/CryptoRPG/joinsetupwindow.cpp", "MU", null ],
 		[ "C:/Users/55949/Documents/CryptoRPG/main.cpp", "MU", null ],
 		[ "C:/Users/55949/Documents/CryptoRPG/mainwindow.cpp", "MU", null ],
 		[ "C:/Users/55949/Documents/CryptoRPG/roomclient.cpp", "MU", null ],
-		[ "C:/Users/55949/Documents/CryptoRPG/roomserver.cpp", "MU", null ]
+		[ "C:/Users/55949/Documents/CryptoRPG/roomserver.cpp", "MU", null ],
+		[ "C:/Users/55949/Documents/CryptoRPG/solowindow.cpp", "MU", null ],
+		[ "C:/Users/55949/Documents/CryptoRPG/startwindow.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

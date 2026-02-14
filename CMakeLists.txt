@@ -30,6 +30,11 @@ qt_add_executable(CryptoRPG
 
     resource.qrc
     style.qss
+    startwindow.h startwindow.cpp startwindow.ui
+    solowindow.h solowindow.cpp solowindow.ui
+    hostsetupwindow.h hostsetupwindow.cpp hostsetupwindow.ui
+    joinsetupwindow.h joinsetupwindow.cpp joinsetupwindow.ui
+    theme.h
 )
 
 target_link_libraries(CryptoRPG PRIVATE
