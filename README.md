@@ -28,28 +28,6 @@ CMake
 MinGW 64-bit
 Inno Setup (instalador Windows)
 
-Estrutura do Projeto:
-CryptoRPG/
-│
-├── engine/
-│   ├── diceengine.h
-│   ├── diceengine.cpp
-│
-├── ui/
-│   ├── mainwindow.h
-│   ├── mainwindow.cpp
-│   ├── mainwindow.ui
-│
-├── resources/
-│   ├── resource.qrc
-│   ├── images/
-│   ├── icons/
-│   └── style.qss
-│
-├── main.cpp
-├── CMakeLists.txt
-└── README.md
-
 Como Funciona:
 Entrada
 O usuário fornece uma expressão no formato:
